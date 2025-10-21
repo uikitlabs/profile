@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Padling</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use a vintage-inspired palette and font -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-brown": "#3e2723", // Darker Brown for text/accents
+              "vintage-yellow": "#ffc107", // Muted Mustard Yellow
+              "vintage-cream": "#fef3c7", // Creamy background
+              "vintage-dark": "#1c1917", // Near-black for shadows
+            },
+            fontFamily: {
+              // Using Inter but styling it heavily to look chunky/retro
+              sans: ["Inter", "sans-serif"],
+            },
+            // Custom border/shadow style for a blocky, retro look
+            boxShadow: {
+              retro: "8px 8px 0px 0px #1c1917",
+              "retro-hover": "4px 4px 0px 0px #1c1917",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Inter Font (Preloaded for consistency) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght400;700;900&display=swap"
+    />
+    <style>
+      /* Minimal custom CSS for background texture/feel */
+      body {
+        background-color: #fef3c7; /* Vintage Cream */
+        color: #3e2723; /* Primary Brown */
+      }
+      .container-shadow {
+        /* This gives a subtle, lifted paper effect */
+        box-shadow: 10px 10px 0px 0px rgba(62, 39, 35, 0.2);
+        border: 2px solid #3e2723;
+      }
+    </style>
+  </head>
+  <body class="font-sans min-h-screen antialiased">
+    <!-- Header / Navigation (Minimal) -->
+    <header
+      class="sticky top-0 z-10 bg-vintage-yellow border-b-4 border-primary-brown shadow-md"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+      >
+        <h1
+          class="text-2xl font-black tracking-widest text-primary-brown uppercase"
+        >
+          Padlings
+        </h1>
+        <nav class="hidden md:block">
+          <a
+            href="#skills"
+            class="ml-8 text-lg font-bold hover:underline underline-offset-4 text-primary-brown"
+            >Skills</a
+          >
+          <!-- Link Contact dihapus -->
+          <a
+            href="#"
+            class="ml-8 px-4 py-2 bg-primary-brown text-vintage-cream font-bold rounded-lg shadow-retro hover:shadow-retro-hover transition duration-200"
+            >My Resume</a
+          >
+        </nav>
+        <!-- Mobile Menu Icon (Placeholder/Minimalist) -->
+        <button
+          class="md:hidden text-primary-brown text-2xl font-extrabold p-2 border-2 border-primary-brown rounded-md hover:bg-primary-brown hover:text-vintage-cream transition duration-150"
+        >
+          &#9776;
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="py-16 md:py-24">
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="p-8 md:p-16 bg-vintage-cream rounded-2xl container-shadow">
+          <p
+            class="text-xl md:text-2xl font-bold mb-4 tracking-wider text-vintage-yellow bg-primary-brown inline-block px-3 py-1 rounded-full border-2 border-vintage-yellow"
+          >
+            DIGITAL CREATOR
+          </p>
+          <h2
+            class="text-4xl sm:text-6xl lg:text-8xl font-black mb-6 leading-tight tracking-tighter uppercase text-primary-brown"
+          >
+            I build the web.
+          </h2>
+          <p
+            class="max-w-3xl mx-auto text-lg md:text-xl mb-10 font-medium text-stone-600"
+          >
+            Hello! I'm a full-stack developer specializing in minimalist design
+            and robust user experiences. I turn complex problems into clean,
+            functional code.
+          </p>
+          <a
+            href="#"
+            class="inline-block px-8 py-4 text-xl font-extrabold uppercase bg-vintage-yellow text-primary-brown rounded-lg shadow-retro border-4 border-primary-brown hover:translate-x-1 hover:translate-y-1 hover:shadow-retro-hover transition duration-300 transform"
+          >
+            View Projects
+          </a>
+        </div>
+      </section>
+
+      <!-- Core Skills (Formerly Feature Grid) -->
+      <section
+        id="skills"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 md:mt-32"
+      >
+        <h3
+          class="text-center text-3xl md:text-5xl font-extrabold mb-12 uppercase text-primary-brown tracking-tighter"
+        >
+          Core Competencies
+        </h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Skill 1: Design -->
+          <div
+            class="p-6 bg-white rounded-xl shadow-retro border-4 border-primary-brown hover:scale-[1.02] transition duration-300"
+          >
+            <div
+              class="text-4xl mb-4 text-vintage-yellow border-4 border-vintage-yellow bg-primary-brown inline-block p-2 rounded-full font-extrabold"
+            >
+              UI
+            </div>
+            <h4 class="text-2xl font-bold mb-2 text-primary-brown uppercase">
+              Interface Design
+            </h4>
+            <p class="text-stone-700">
+              Crafting pixel-perfect user interfaces with a focus on usability
+              and accessibility.
+            </p>
+          </div>
+
+          <!-- Skill 2: Development -->
+          <div
+            class="p-6 bg-white rounded-xl shadow-retro border-4 border-primary-brown hover:scale-[1.02] transition duration-300"
+          >
+            <div
+              class="text-4xl mb-4 text-vintage-yellow border-4 border-vintage-yellow bg-primary-brown inline-block p-2 rounded-full font-extrabold"
+            >
+              DEV
+            </div>
+            <h4 class="text-2xl font-bold mb-2 text-primary-brown uppercase">
+              Frontend Logic
+            </h4>
+            <p class="text-stone-700">
+              Expertise in modern JavaScript frameworks (React, Angular) and
+              performance optimization.
+            </p>
+          </div>
+
+          <!-- Skill 3: Strategy -->
+          <div
+            class="p-6 bg-white rounded-xl shadow-retro border-4 border-primary-brown hover:scale-[1.02] transition duration-300"
+          >
+            <div
+              class="text-4xl mb-4 text-vintage-yellow border-4 border-vintage-yellow bg-primary-brown inline-block p-2 rounded-full font-extrabold"
+            >
+              API
+            </div>
+            <h4 class="text-2xl font-bold mb-2 text-primary-brown uppercase">
+              Data Integration
+            </h4>
+            <p class="text-stone-700">
+              Building and connecting scalable RESTful APIs and managing cloud
+              database solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bagian Kontak dan Media Sosial telah dihapus sepenuhnya -->
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="mt-20 py-8 bg-vintage-dark text-vintage-cream border-t-4 border-vintage-yellow"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm font-medium"
+      >
+        <p>&copy; 2025 padlings. Built with retro flair.</p>
+        <div class="mt-2 space-x-4">
+          <a href="#" class="hover:text-vintage-yellow transition duration-150"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
